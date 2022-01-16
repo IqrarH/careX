@@ -122,39 +122,73 @@
 
     <Button
         android:id="@+id/clothesBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:background="@drawable/transparent"
         android:text="Clothes"
         android:textColor="@color/black"
-        android:background="@drawable/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <Button
         android:id="@+id/shoesBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:background="@drawable/transparent"
         android:text="Shoes"
         android:textColor="@color/black"
-        android:background="@drawable/transparent"
         app:layout_constraintEnd_toStartOf="@+id/healthBtn"
         app:layout_constraintStart_toEndOf="@+id/clothesBtn"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <Button
         android:id="@+id/healthBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:textColor="@color/black"
         android:background="@drawable/transparent"
         android:text="Health"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/foodBtn"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Food"
+        android:background="@drawable/transparent"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clothesBtn" />
+
+    <Button
+        android:id="@+id/vehicleBtn"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:text="Vehicle"
+        android:background="@drawable/transparent"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/othersBtn"
+        app:layout_constraintStart_toEndOf="@+id/foodBtn"
+        app:layout_constraintTop_toBottomOf="@+id/shoesBtn" />
+
+    <Button
+        android:id="@+id/othersBtn"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Others"
+        android:background="@drawable/transparent"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/healthBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
