@@ -122,6 +122,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="Clothes"
+        android:textColor="@color/black"
+        android:background="@drawable/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -133,6 +135,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:text="Shoes"
+        android:textColor="@color/black"
+        android:background="@drawable/transparent"
         app:layout_constraintEnd_toStartOf="@+id/healthBtn"
         app:layout_constraintStart_toEndOf="@+id/clothesBtn"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -143,6 +147,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:textColor="@color/black"
+        android:background="@drawable/transparent"
         android:text="Health"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
