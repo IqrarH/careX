@@ -16,6 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void onDonateClick(View view) {
         Intent intent = new Intent(MainActivity.this, addDetailActivity.class);
-
+        startActivity(intent);
     }
 }
