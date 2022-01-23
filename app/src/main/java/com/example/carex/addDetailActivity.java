@@ -43,4 +43,7 @@ public class addDetailActivity extends AppCompatActivity {
     public void onImageClick(View view) {
         mGetContent.launch("image/*");
     }
+
+    public void onComplete(View view) {
+    }
 }
