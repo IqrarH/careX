@@ -7,14 +7,16 @@ public class ItemModel {
     private String itemDescription;
     private String pickupAddress;
     private String category;
+    private boolean isAvailable;
 
-    public ItemModel(String donorName, String phoneNo, String itemName, String itemDescription, String pickupAddress, String category) {
+    public ItemModel(String donorName, String phoneNo, String itemName, String itemDescription, String pickupAddress, String category, boolean isAvailable) {
         this.donorName = donorName;
         this.phoneNo = phoneNo;
         this.itemName = itemName;
         this.itemDescription = itemDescription;
         this.pickupAddress = pickupAddress;
         this.category = category;
+        this.isAvailable = isAvailable;
     }
 
     public String getDonorName() {
@@ -63,5 +65,13 @@ public class ItemModel {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
     }
 }

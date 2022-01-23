@@ -60,28 +60,35 @@ public class addDetailActivity extends AppCompatActivity {
     }
 
     public void onComplete(View view) {
-        try {
-            item = new ItemModel(
+        if(nameEt.getText().toString().equals("") || phoneEt.getText().toString().equals("") ||
+        itemNameEt.getText().toString().equals("") ||  descriptionEt.getText().toString().equals("")
+        || pickupEt.getText().toString().equals("") || dropdown.getSelectedItem().toString().equals("Category")){
+            Toast.makeText(addDetailActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
+        }else{
+            try {
+                item = new ItemModel(
                         nameEt.getText().toString(),
                         phoneEt.getText().toString(),
                         itemNameEt.getText().toString(),
                         descriptionEt.getText().toString(),
                         pickupEt.getText().toString(),
-                        dropdown.getSelectedItem().toString()
-                    );
-            Toast.makeText(addDetailActivity.this, "WOHOO! ITEM ADDED", Toast.LENGTH_SHORT).show();
-        }
-        catch (Exception e){
-            Toast.makeText(addDetailActivity.this, "Error", Toast.LENGTH_SHORT).show();
-        }
-        dbHelper dbHelper = new dbHelper(addDetailActivity.this);
-        dbHelper.addItem(item);
+                        dropdown.getSelectedItem().toString(),
+                        true
+                );
+                Toast.makeText(addDetailActivity.this, "WOHOO! ITEM ADDED", Toast.LENGTH_SHORT).show();
+            }
+            catch (Exception e){
+                Toast.makeText(addDetailActivity.this, "Error", Toast.LENGTH_SHORT).show();
+            }
+            dbHelper dbHelper = new dbHelper(addDetailActivity.this);
+            dbHelper.addItem(item);
 
-        nameEt.setText("");
-        phoneEt.setText("");
-        itemNameEt.setText("");
-        descriptionEt.setText("");
-        pickupEt.setText("");
-        dropdown.setSelection(0);
+            nameEt.setText("");
+            phoneEt.setText("");
+            itemNameEt.setText("");
+            descriptionEt.setText("");
+            pickupEt.setText("");
+            dropdown.setSelection(0);
+        }
     }
 }

@@ -130,6 +130,7 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/transparent"
         android:text="Clothes"
+        android:onClick="onClothesClick"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -143,6 +144,7 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/transparent"
         android:text="Shoes"
+        android:onClick="onShoesClick"
         android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/healthBtn"
         app:layout_constraintStart_toEndOf="@+id/clothesBtn"
@@ -156,6 +158,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/transparent"
         android:text="Health"
+        android:onClick="onHealthClick"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -168,6 +171,7 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/transparent"
         android:text="Food"
+        android:onClick="onFoodClick"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clothesBtn" />
@@ -181,6 +185,7 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/transparent"
         android:text="Vehicle"
+        android:onClick="onVehicleClick"
         android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/othersBtn"
         app:layout_constraintStart_toEndOf="@+id/foodBtn"
@@ -194,6 +199,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/transparent"
         android:text="Others"
+        android:onClick="onOthersClick"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/healthBtn" />

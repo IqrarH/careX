@@ -1,7 +1,7 @@
 package com.example.carex;
 
 import android.content.Context;
-import android.util.Log;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +37,10 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
         holder.pickupTextView.setText(data.getPickupAddress());
         holder.phoneTextView.setText(data.getPhoneNo());
         holder.donorNameTextView.setText(data.getDonorName());
-        holder.categoryTextView.setText(data.getCategory());
-
+        holder.availableTextView.setText(data.isAvailable()?"Available":"Finished");
+        if(holder.availableTextView.getText()=="Finished"){
+            holder.availableTextView.setTextColor(Color.RED);
+        }
     }
 
     @Override
@@ -52,7 +54,7 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
         TextView pickupTextView;
         TextView phoneTextView;
         TextView donorNameTextView;
-        TextView categoryTextView;
+        TextView availableTextView;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
@@ -61,7 +63,8 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
             pickupTextView = itemView.findViewById(R.id.pickupTextView);
             phoneTextView = itemView.findViewById(R.id.phoneTextView);
             donorNameTextView = itemView.findViewById(R.id.donorNameTextView);
-            categoryTextView = itemView.findViewById(R.id.categoryTextView);
+            availableTextView = itemView.findViewById(R.id.availableTextView);
+
         }
     }
 }
