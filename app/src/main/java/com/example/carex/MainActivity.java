@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, addDetailActivity.class);
         startActivity(intent);
     }
+
+    public void onExploreClick(View view) {
+        Intent intent = new Intent(MainActivity.this, ExploreActivity.class);
+        startActivity(intent);
+    }
 }

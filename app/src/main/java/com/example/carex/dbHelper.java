@@ -39,7 +39,7 @@ public class dbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void  addStudent(ItemModel Item){
+    public void  addItem(ItemModel Item){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 

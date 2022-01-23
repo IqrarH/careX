@@ -10,19 +10,34 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class addDetailActivity extends AppCompatActivity {
+    EditText nameEt;
+    EditText phoneEt;
+    EditText itemNameEt;
+    EditText descriptionEt;
+    EditText pickupEt;
     Spinner dropdown;
     ImageView itemImageView;
     ActivityResultLauncher<String> mGetContent;
+    ItemModel item;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_detail);
         dropdown = findViewById(R.id.categoryDropdown);
         itemImageView= findViewById(R.id.itemImageView);
+
+        nameEt = findViewById(R.id.nameEt);
+        phoneEt = findViewById(R.id.phoneEt);
+        itemNameEt = findViewById(R.id.itemNameEt);
+        descriptionEt = findViewById(R.id.descriptionEt);
+        pickupEt = findViewById(R.id.pickupEt);
+
         String[] items = new String[]{"Category", "Clothes", "Shoes", "Health", "Food", "Vehicle", "Others"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items){
             @Override
@@ -45,5 +60,28 @@ public class addDetailActivity extends AppCompatActivity {
     }
 
     public void onComplete(View view) {
+        try {
+            item = new ItemModel(
+                        nameEt.getText().toString(),
+                        phoneEt.getText().toString(),
+                        itemNameEt.getText().toString(),
+                        descriptionEt.getText().toString(),
+                        pickupEt.getText().toString(),
+                        dropdown.getSelectedItem().toString()
+                    );
+            Toast.makeText(addDetailActivity.this, "WOHOO! ITEM ADDED", Toast.LENGTH_SHORT).show();
+        }
+        catch (Exception e){
+            Toast.makeText(addDetailActivity.this, "Error", Toast.LENGTH_SHORT).show();
+        }
+        dbHelper dbHelper = new dbHelper(addDetailActivity.this);
+        dbHelper.addItem(item);
+
+        nameEt.setText("");
+        phoneEt.setText("");
+        itemNameEt.setText("");
+        descriptionEt.setText("");
+        pickupEt.setText("");
+        dropdown.setSelection(0);
     }
 }
