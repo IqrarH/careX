@@ -1,206 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView4"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+    <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="38dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/list_icon" />
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/nav_menu"
+        app:menu="@menu/menu" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:srcCompat="@drawable/list_icon" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="38dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:srcCompat="@drawable/list_icon" />
 
-    <Button
-        android:id="@+id/donateBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Donate"
-        android:onClick="onDonateClick"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:srcCompat="@drawable/list_icon" />
 
-    <Button
-        android:id="@+id/exploreBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:onClick="onExploreClick"
-        android:text="Explore"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/donateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:onClick="onDonateClick"
+            android:text="Donate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="32dp"
-        android:text="careX is platform where you can donate and find almost anything for the deserving people of our society"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="normal|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exploreBtn" />
+        <Button
+            android:id="@+id/exploreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="onExploreClick"
+            android:text="Explore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:text="Follow these simple steps to donate an item"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="32dp"
+            android:text="careX is platform where you can donate and find almost anything for the deserving people of our society"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="normal|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exploreBtn" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/list_icon" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="Follow these simple steps to donate an item"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="24dp"
-        android:text='Click on the "DONATE" button above.'
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:srcCompat="@drawable/list_icon" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="328dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="Add details about the item you want to donate."
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="24dp"
+            android:text='Click on the "DONATE" button above.'
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="328dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Someone will contact you to decide a pick-up point for the item."
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Add details about the item you want to donate."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <Button
-        android:id="@+id/clothesBtn"
-        android:layout_width="104dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/transparent"
-        android:text="Clothes"
-        android:onClick="onClothesClick"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Someone will contact you to decide a pick-up point for the item."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <Button
-        android:id="@+id/shoesBtn"
-        android:layout_width="104dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/transparent"
-        android:text="Shoes"
-        android:onClick="onShoesClick"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/healthBtn"
-        app:layout_constraintStart_toEndOf="@+id/clothesBtn"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        <Button
+            android:id="@+id/clothesBtn"
+            android:layout_width="104dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/transparent"
+            android:text="Clothes"
+            android:onClick="onClothesClick"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-    <Button
-        android:id="@+id/healthBtn"
-        android:layout_width="104dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/transparent"
-        android:text="Health"
-        android:onClick="onHealthClick"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        <Button
+            android:id="@+id/shoesBtn"
+            android:layout_width="104dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/transparent"
+            android:text="Shoes"
+            android:onClick="onShoesClick"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/healthBtn"
+            app:layout_constraintStart_toEndOf="@+id/clothesBtn"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-    <Button
-        android:id="@+id/foodBtn"
-        android:layout_width="104dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/transparent"
-        android:text="Food"
-        android:onClick="onFoodClick"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clothesBtn" />
+        <Button
+            android:id="@+id/healthBtn"
+            android:layout_width="104dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/transparent"
+            android:text="Health"
+            android:onClick="onHealthClick"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-    <Button
-        android:id="@+id/vehicleBtn"
-        android:layout_width="104dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/transparent"
-        android:text="Vehicle"
-        android:onClick="onVehicleClick"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/othersBtn"
-        app:layout_constraintStart_toEndOf="@+id/foodBtn"
-        app:layout_constraintTop_toBottomOf="@+id/shoesBtn" />
+        <Button
+            android:id="@+id/foodBtn"
+            android:layout_width="104dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/transparent"
+            android:text="Food"
+            android:onClick="onFoodClick"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clothesBtn" />
 
-    <Button
-        android:id="@+id/othersBtn"
-        android:layout_width="104dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/transparent"
-        android:text="Others"
-        android:onClick="onOthersClick"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/healthBtn" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/vehicleBtn"
+            android:layout_width="104dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/transparent"
+            android:text="Vehicle"
+            android:onClick="onVehicleClick"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/othersBtn"
+            app:layout_constraintStart_toEndOf="@+id/foodBtn"
+            app:layout_constraintTop_toBottomOf="@+id/shoesBtn" />
+
+        <Button
+            android:id="@+id/othersBtn"
+            android:layout_width="104dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/transparent"
+            android:text="Others"
+            android:onClick="onOthersClick"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/healthBtn" />
+
+        <Button
+            android:id="@+id/myItemsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="My Items"
+            android:onClick="onMyItemsClick"
+            app:layout_constraintEnd_toStartOf="@+id/exploreBtn"
+            app:layout_constraintStart_toEndOf="@+id/donateBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
