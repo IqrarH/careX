@@ -16,6 +16,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class addDetailActivity extends AppCompatActivity {
+
+
     EditText nameEt;
     EditText phoneEt;
     EditText itemNameEt;
