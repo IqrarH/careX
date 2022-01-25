@@ -37,8 +37,8 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
         holder.pickupTextView.setText(data.getPickupAddress());
         holder.phoneTextView.setText(data.getPhoneNo());
         holder.donorNameTextView.setText(data.getDonorName());
-        holder.availableTextView.setText(data.isAvailable()?"Available":"Finished");
-        if(holder.availableTextView.getText()=="Finished"){
+        holder.availableTextView.setText(data.isAvailable()?"Available":"Delivered");
+        if(holder.availableTextView.getText()=="Delivered"){
             holder.availableTextView.setTextColor(Color.RED);
         }
     }

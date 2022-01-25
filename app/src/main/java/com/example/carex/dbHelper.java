@@ -115,4 +115,11 @@ public class dbHelper extends SQLiteOpenHelper {
         Log.d("TAG", String.valueOf(itemArrayList));
         return itemArrayList;
     }
+
+    public void deleteStudent(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+//        db.update(ITEM_TABLE,"STUDENTID=?",new String[]{String.valueOf(id)});
+        db.close();
+
+    }
 }
