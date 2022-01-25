@@ -11,6 +11,12 @@ import java.util.List;
 public class myRecyclerViewAdapter2 extends RecyclerView.Adapter<myRecyclerViewAdapter.MyViewHolder>{
     List<ItemModel> itemsList;
     private static Context context;
+
+    public myRecyclerViewAdapter2(Context context, List<ItemModel> itemsList){
+        this.itemsList = itemsList;
+        this.context = context;
+    }
+
     @NonNull
     @Override
     public myRecyclerViewAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
