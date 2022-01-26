@@ -41,13 +41,17 @@ public class myRecyclerViewAdapter2 extends RecyclerView.Adapter<myRecyclerViewA
         holder.availableTextView.setText(data.isAvailable()?"Available":"Delivered");
         if(holder.availableTextView.getText()=="Delivered"){
             holder.availableTextView.setTextColor(Color.RED);
+            holder.deliveredBtn.setEnabled(false);
         }
 
         holder.deliveredBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dbHelper dbHelper = new dbHelper(context);
-
+                dbHelper.markAsDelivered(data.getId());
+                holder.availableTextView.setText("Delivered");
+                holder.availableTextView.setTextColor(Color.RED);
+                holder.deliveredBtn.setEnabled(false);
             }
         });
     }

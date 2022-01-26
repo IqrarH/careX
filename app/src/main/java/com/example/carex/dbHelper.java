@@ -74,7 +74,9 @@ public class dbHelper extends SQLiteOpenHelper {
         if (cursorCourses.moveToFirst()) {
             do {
 
-                itemArrayList.add(new ItemModel(cursorCourses.getString(1),
+                itemArrayList.add(new ItemModel(
+                        cursorCourses.getInt(0),
+                        cursorCourses.getString(1),
                         cursorCourses.getString(2),
                         cursorCourses.getString(3),
                         cursorCourses.getString(4),
@@ -101,7 +103,9 @@ public class dbHelper extends SQLiteOpenHelper {
         if (cursorCourses.moveToFirst()) {
             do {
 
-                itemArrayList.add(new ItemModel(cursorCourses.getString(1),
+                itemArrayList.add(new ItemModel(
+                        cursorCourses.getInt(0),
+                        cursorCourses.getString(1),
                         cursorCourses.getString(2),
                         cursorCourses.getString(3),
                         cursorCourses.getString(4),
@@ -116,10 +120,11 @@ public class dbHelper extends SQLiteOpenHelper {
         return itemArrayList;
     }
 
-    public void deleteStudent(int id){
+    public void markAsDelivered(int id){
         SQLiteDatabase db = this.getWritableDatabase();
-//        db.update(ITEM_TABLE,"STUDENTID=?",new String[]{String.valueOf(id)});
+        ContentValues values = new ContentValues();
+        values.put(STATUS, false);
+        db.update(ITEM_TABLE, values, ITEM_ID+"=?", new String[]{String.valueOf(id)});
         db.close();
-
     }
 }

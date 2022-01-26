@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void onMyItemsClick(View view) {
-        Intent intent = new Intent(MainActivity.this, MyItems.class);
+        Intent intent = new Intent(MainActivity.this, PhoneActivity.class);
         startActivity(intent);
     }
 }

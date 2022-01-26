@@ -1,6 +1,8 @@
 package com.example.carex;
 
 public class ItemModel {
+
+    private int id;
     private String donorName;
     private String phoneNo;
     private String itemName;
@@ -8,6 +10,17 @@ public class ItemModel {
     private String pickupAddress;
     private String category;
     private boolean isAvailable;
+
+    public ItemModel(int id,String donorName, String phoneNo, String itemName, String itemDescription, String pickupAddress, String category, boolean isAvailable) {
+        this.donorName = donorName;
+        this.phoneNo = phoneNo;
+        this.itemName = itemName;
+        this.itemDescription = itemDescription;
+        this.pickupAddress = pickupAddress;
+        this.category = category;
+        this.isAvailable = isAvailable;
+        this.id = id;
+    }
 
     public ItemModel(String donorName, String phoneNo, String itemName, String itemDescription, String pickupAddress, String category, boolean isAvailable) {
         this.donorName = donorName;
@@ -17,6 +30,14 @@ public class ItemModel {
         this.pickupAddress = pickupAddress;
         this.category = category;
         this.isAvailable = isAvailable;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getDonorName() {
